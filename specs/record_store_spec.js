@@ -12,7 +12,7 @@ describe('Record Store', function () {
   beforeEach(function () {
     recordStore = new RecordStore('Rabbit Hole Records', 'Edinburgh', 19);
     record1 = new Record('Papa Darren', 'Down the rabbit hole', 'hip-hop', 4.99);
-    record2 = new Record('Katty Kat','Hows your PDA?', 'metal', 3.99);
+    record2 = new Record('Jarrod and Craig','JS crew', 'metal', 3.99);
   });
 
   it('should have a name', function () {
