@@ -8,7 +8,7 @@ describe('Record Store', function () {
   let recordStore;
 
   beforeEach(function () {
-    recordStore = new RecordStore('Rabbit Hole Records', 'Edinburgh');
+    recordStore = new RecordStore('Rabbit Hole Records', 'Edinburgh', 19);
   });
 
   it('should have a name', function () {
@@ -23,5 +23,7 @@ describe('Record Store', function () {
     assert.deepStrictEqual(recordStore.inventory, []);
   });
 
-  xit('should have a balance');
+  it('should have a balance', function () {
+    assert.strictEqual(recordStore.balance, 19);
+  });
 });
