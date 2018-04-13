@@ -36,4 +36,10 @@ describe('Record Store', function () {
     recordStore.addRecord(record2);
     assert.deepStrictEqual(recordStore.inventory, [record1, record2])
   })
+
+  it('can sell a record', function(){
+    recordStore.sellRecord(record1);
+    assert.deepStrictEqual(recordStore.inventory, []);
+    assert.strictEqual(Math.round(recordStore.balance*100)/100, 23.99);
+  })
 });
