@@ -23,4 +23,15 @@ Customer.prototype.getValueOfCollection = function () {
   return this.recordCollection.reduce(reducer, 0);
 };
 
+Customer.prototype.getValueOfGenre = function (searchGenre) {
+  const genreCollection = this.recordCollection.filter((record) => {
+    return record.genre === searchGenre;
+  });
+
+  const reducer = (runningTotal, record) => {
+    return runningTotal + record.price;
+  }
+  return genreCollection.reduce(reducer, 0);
+};
+
 module.exports = Customer;
